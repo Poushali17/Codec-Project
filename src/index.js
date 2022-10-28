@@ -11,7 +11,7 @@ function calculateRobotFinalPosition() {
       let initialXAxisPlateau = 1;
       let initialYAxisPlateau = 1;
       let initialPosition = 'North';
-      rl.question('Please enter grid size: ', (size) => {
+      rl.question('Please enter plateau grid size: ', (size) => {
         rl.question('Please enter command: ', (command) => {
             const xAxisPlateau = size.split(/[xX]+/)[0];
             const yAxisPlateau = size.split(/[xX]+/)[1];
@@ -57,9 +57,9 @@ function calculateRobotFinalPosition() {
                     }
                 } 
             });
-            console.log('The final position of the Robot in Mars :', initialXAxisPlateau,',',initialYAxisPlateau,',',initialPosition);
-            console.log('Please Note:\n','Considering the grid origin (0,0), the max limit should be the plateau grid size. ie. for plateau grid size 3x4, the limit is X=3, Y=4\n',
-            'If the robot reaches the limit of the plateau and wants to move within the plateau size, we will allow to do that');
+            console.log(`The final position of the Robot in Mars : ${initialXAxisPlateau},${initialYAxisPlateau},${initialPosition}`);
+            console.log('Please Note:\n','Considering the grid origin (0,0), the max limit should be the plateau grid size. ie. for plateau grid size 3x4, the limit is X=3, Y=4.\n',
+            'If the robot reaches the limit of the plateau and wants to move within the plateau size, we will allow to do that.');
         })
       });
 }

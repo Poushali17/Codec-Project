@@ -17,13 +17,13 @@ function calculateRobotFinalPosition() {
             const yAxisPlateau = size.split(/[xX]+/)[1];
 
             command.split('').forEach((el) => {
-                if(el === 'F' && (initialYAxisPlateau < yAxisPlateau && initialPosition == 'North')){
+                if(el === 'F' && (initialYAxisPlateau < yAxisPlateau && initialPosition === 'North')){
                     initialYAxisPlateau++; 
-                } else if(el === 'F' && (initialYAxisPlateau < yAxisPlateau && initialYAxisPlateau > 1 && initialPosition == 'South')){
+                } else if(el === 'F' && (initialYAxisPlateau < yAxisPlateau && initialYAxisPlateau > 1 && initialPosition === 'South')){
                     initialYAxisPlateau--; 
-                } else if(el === 'F' && (initialXAxisPlateau < xAxisPlateau && initialPosition == 'East')){
+                } else if(el === 'F' && (initialXAxisPlateau < xAxisPlateau && initialPosition === 'East')){
                     initialXAxisPlateau++; 
-                } else if(el === 'F' && (initialXAxisPlateau < xAxisPlateau && initialXAxisPlateau > 1 && initialPosition == 'West')){
+                } else if(el === 'F' && (initialXAxisPlateau < xAxisPlateau && initialXAxisPlateau > 1 && initialPosition === 'West')){
                     initialXAxisPlateau--; 
                 } else if(el === 'L'){
                     switch(initialPosition) {
